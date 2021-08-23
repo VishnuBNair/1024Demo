@@ -18,12 +18,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2048" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEb-ld-cuQ">
                                 <rect key="frame" x="147" y="420" width="120" height="66"/>
                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="60"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.95436769720000003" green="0.73799973730000001" blue="0.33322319389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.32666963339999999" green="0.23301458359999999" blue="0.46668851379999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.14346477390000001" green="0.23708623649999999" blue="0.33726733920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="zEb-ld-cuQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="L5Q-Lh-Qic"/>
                             <constraint firstItem="zEb-ld-cuQ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="znv-YI-INP"/>

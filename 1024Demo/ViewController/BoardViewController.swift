@@ -1,5 +1,5 @@
 //
-//  SplashViewController.swift
+//  BoardViewController.swift
 //  1024Demo
 //
 //  Created by Vishnu  Nair on 23/08/21.
@@ -7,8 +7,9 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class BoardViewController: UIViewController {
 
+    @IBOutlet weak var gameBoardView: BoardView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
