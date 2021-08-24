@@ -14,9 +14,13 @@ class SplashViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor("#26495c")
+        
+        //presentNextControllerAfterFewSeconds
         self.perform(#selector(loadNextViewController), with: nil, afterDelay: 3)
     }
     
+    
+    //load BoardViewController
     @objc func loadNextViewController(){
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

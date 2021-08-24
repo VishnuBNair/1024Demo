@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4E1D23A426D3811A00FE4F0D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D23A326D3811A00FE4F0D /* UIColorExtension.swift */; };
 		4E1D23A626D3831D00FE4F0D /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D23A526D3831D00FE4F0D /* BoardViewController.swift */; };
+		4E1D23A826D38B4200FE4F0D /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D23A726D38B4200FE4F0D /* UILabelExtension.swift */; };
+		4E1D23AA26D3951900FE4F0D /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D23A926D3951900FE4F0D /* GameModel.swift */; };
+		4E1D23AC26D3D95200FE4F0D /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D23AB26D3D95200FE4F0D /* CGPoint.swift */; };
 		4E33D73A26D33A17005E0B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E33D73926D33A17005E0B88 /* AppDelegate.swift */; };
 		4E33D73C26D33A17005E0B88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E33D73B26D33A17005E0B88 /* SceneDelegate.swift */; };
 		4E33D74126D33A17005E0B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E33D73F26D33A17005E0B88 /* Main.storyboard */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		4E1D23A326D3811A00FE4F0D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		4E1D23A526D3831D00FE4F0D /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		4E1D23A726D38B4200FE4F0D /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		4E1D23A926D3951900FE4F0D /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		4E1D23AB26D3D95200FE4F0D /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		4E33D73626D33A17005E0B88 /* 1024Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1024Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E33D73926D33A17005E0B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E33D73B26D33A17005E0B88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,14 +117,10 @@
 		4E33D73826D33A17005E0B88 /* 1024Demo */ = {
 			isa = PBXGroup;
 			children = (
-				4E33D77026D34080005E0B88 /* Storyboard */,
-				4E33D76F26D3405A005E0B88 /* Delegate */,
-				4E33D76C26D34002005E0B88 /* Extensions */,
+				4EB08D0B26D4F4E90019A137 /* Common */,
 				4E33D77126D349F4005E0B88 /* View */,
 				4E33D77626D34FA4005E0B88 /* Model */,
 				4E33D76926D33F30005E0B88 /* ViewController */,
-				4E33D74226D33A19005E0B88 /* Assets.xcassets */,
-				4E33D74726D33A19005E0B88 /* Info.plist */,
 			);
 			path = 1024Demo;
 			sourceTree = "<group>";
@@ -156,6 +158,8 @@
 				4E33D76D26D34018005E0B88 /* UIViewExtension.swift */,
 				4E33D77726D34FEF005E0B88 /* ArrayExtension.swift */,
 				4E1D23A326D3811A00FE4F0D /* UIColorExtension.swift */,
+				4E1D23A726D38B4200FE4F0D /* UILabelExtension.swift */,
+				4E1D23AB26D3D95200FE4F0D /* CGPoint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,8 +194,21 @@
 		4E33D77626D34FA4005E0B88 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E1D23A926D3951900FE4F0D /* GameModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4EB08D0B26D4F4E90019A137 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4E33D74726D33A19005E0B88 /* Info.plist */,
+				4E33D74226D33A19005E0B88 /* Assets.xcassets */,
+				4E33D76C26D34002005E0B88 /* Extensions */,
+				4E33D76F26D3405A005E0B88 /* Delegate */,
+				4E33D77026D34080005E0B88 /* Storyboard */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,13 +343,16 @@
 			files = (
 				4E33D76E26D34018005E0B88 /* UIViewExtension.swift in Sources */,
 				4E33D73A26D33A17005E0B88 /* AppDelegate.swift in Sources */,
+				4E1D23A826D38B4200FE4F0D /* UILabelExtension.swift in Sources */,
 				4E33D77826D34FEF005E0B88 /* ArrayExtension.swift in Sources */,
+				4E1D23AC26D3D95200FE4F0D /* CGPoint.swift in Sources */,
 				4E33D77326D34A3C005E0B88 /* BoardView.swift in Sources */,
 				4E33D73C26D33A17005E0B88 /* SceneDelegate.swift in Sources */,
 				4E1D23A426D3811A00FE4F0D /* UIColorExtension.swift in Sources */,
 				4E33D77526D34A4B005E0B88 /* BoardTileView.swift in Sources */,
 				4E33D76B26D33F45005E0B88 /* SplashViewController.swift in Sources */,
 				4E1D23A626D3831D00FE4F0D /* BoardViewController.swift in Sources */,
+				4E1D23AA26D3951900FE4F0D /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -493,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -510,7 +530,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83BT63F38N;
-				INFOPLIST_FILE = 1024Demo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/1024Demo/Common/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,7 +550,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83BT63F38N;
-				INFOPLIST_FILE = 1024Demo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/1024Demo/Common/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

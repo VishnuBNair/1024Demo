@@ -24,9 +24,8 @@ class BoardTileView: UIView {
             if !valueHidden {
                 valueLabel.text = "\(value)"
             }
-            let str = value <= 2048 ? "\(value)" : "super"
-            valueLabel.backgroundColor = colorForType(str, key: "background")
-            valueLabel.textColor = colorForType(str, key: "text")
+            valueLabel.backgroundColor = colorForType()
+            valueLabel.textColor = UIColor.white
         }
     }
     var valueHidden = false {
@@ -50,6 +49,7 @@ class BoardTileView: UIView {
         setup()
     }
     
+    //SetUpTileLabel
     fileprivate func setup() {
         guard !isSetup else { return }
         isSetup = true
@@ -70,17 +70,10 @@ class BoardTileView: UIView {
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-p-[valueLabel]-p-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: ["p": 5], views: ["valueLabel" : valueLabel]))
     }
     
-    fileprivate func colorForType(_ value: String, key: String) -> UIColor {
-        if let colorScheme = colorScheme {
-            if let vDic = colorScheme[value], let s = vDic[key] {
-                return UIColor(s)
-            } else {
-                if let vDic = colorScheme["default"], let s = vDic[key] {
-                    return UIColor(s)
-                }
-            }
-        }
-        return UIColor.black
+    
+    //TileBackgroubdColor
+    fileprivate func colorForType() -> UIColor {
+        return UIColor.red
     }
 }
 

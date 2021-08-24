@@ -29,3 +29,4 @@ extension Array where Element : Equatable {
         return self.enumerated().compactMap { $0.element == value ? coord(at: $0.offset) : nil }
     }
 }
+

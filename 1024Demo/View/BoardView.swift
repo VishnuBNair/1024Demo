@@ -19,15 +19,6 @@ class BoardView: UIView {
     }
     var tiles = [BoardTileView]()
     var placeholderLayers = [CALayer]()
-    var colorScheme: [String : [String : String]] = {
-        let data = try! Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "default-color", ofType: "json")!))
-        do {
-            let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as! [String : [String : String]]
-            return json
-        } catch {
-            return [String : [String : String]]()
-        }
-    }()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -35,11 +26,12 @@ class BoardView: UIView {
         animateTiles()
     }
     
+    //TileBackground
     func spawnTile(at position: BoardPosition) -> BoardTileView {
         let tile = BoardTileView(frame: frame(at: position))
         tiles.append(tile)
         addSubview(tile)
-        tile.colorScheme = colorScheme
+        tile.backgroundColor = UIColor.clear
         tile.position = position
         tile.cornerRadius = 5
         tile.transform = CGAffineTransform(scaleX: 0.1, y: 0.1).concatenating(CGAffineTransform(rotationAngle: 3.14))
@@ -52,10 +44,13 @@ class BoardView: UIView {
         return tile
     }
     
+    //MoveTileFunction
     func moveTile(from: BoardPosition, to: BoardPosition) {
         tile(at: from)?.position = to
     }
     
+    
+    //Move&RemoveTileFunction
     func moveAndRemoveTile(from: BoardPosition, to: BoardPosition) {
         if let fromTile = tile(at: from), let toTile = tile(at: to) {
             fromTile.destroy = true
@@ -70,6 +65,8 @@ class BoardView: UIView {
         }
     }
     
+    
+    //AnimateTileFunction
     func animateTiles() {
         var destroyed = [BoardTileView]()
         for tile in tiles {
@@ -90,6 +87,8 @@ class BoardView: UIView {
         })
     }
     
+    
+    //UpdateValuesinBoardTile
     func updateValuesWithModel(_ model: [Int], canSpawn: Bool) {
         for y in 0..<model.size {
             for x in 0..<model.size {
@@ -108,6 +107,8 @@ class BoardView: UIView {
             }
         }
     }
+    
+    
     
     fileprivate func updatePlaceholderLayers() {
         while placeholderLayers.count != size * size {

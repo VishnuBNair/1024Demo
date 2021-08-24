@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,7 +23,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nw6-Uz-Xb4">
                                         <rect key="frame" x="157.5" y="0.0" width="236.5" height="205.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD1-rD-eHV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2345" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD1-rD-eHV">
                                                 <rect key="frame" x="5" y="5" width="226.5" height="195.5"/>
                                                 <color key="backgroundColor" red="0.14346477390000001" green="0.23708623649999999" blue="0.33726733920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="35"/>
@@ -46,7 +47,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rnz-Zi-yaa">
                                         <rect key="frame" x="5" y="5" width="147.5" height="264"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epw-3F-maz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epw-3F-maz">
                                                 <rect key="frame" x="0.0" y="0.0" width="147.5" height="127"/>
                                                 <color key="backgroundColor" red="0.92695564029999999" green="0.46917754410000001" blue="0.30975452069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -58,10 +59,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjT-i2-Rsc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjT-i2-Rsc">
                                                 <rect key="frame" x="0.0" y="137" width="147.5" height="127"/>
-                                                <color key="backgroundColor" red="0.92695564029999999" green="0.46917754410000001" blue="0.30975452069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="backgroundColor" red="0.14346477390000001" green="0.23708623649999999" blue="0.33726733920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -77,18 +78,14 @@
                                         <rect key="frame" x="162.5" y="210.5" width="226.5" height="58.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhS-GO-bIE">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="58.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="226.5" height="58.5"/>
                                                 <color key="backgroundColor" red="0.95436769720000003" green="0.73799973730000001" blue="0.33322319389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="New Game">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XX4-mi-pxd">
-                                                <rect key="frame" x="118.5" y="0.0" width="108" height="58.5"/>
-                                                <color key="backgroundColor" red="0.95436769720000003" green="0.73799973730000001" blue="0.33322319389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Undo">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <connections>
+                                                    <action selector="resetGame:" destination="7ma-UV-NyN" eventType="touchUpInside" id="qTx-wH-BXG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -112,7 +109,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZz-DK-ieR">
                                 <rect key="frame" x="10" y="448" width="394" height="394"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWq-pe-rfp" customClass="BoardView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWq-pe-rfp" customClass="BoardView" customModule="_024Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="394"/>
                                         <color key="backgroundColor" red="0.14346477390000001" green="0.23708623649999999" blue="0.33726733920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -156,7 +153,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gameBoardView" destination="ZWq-pe-rfp" id="18N-Ua-hfi"/>
+                        <outlet property="bestLabel" destination="epw-3F-maz" id="7fx-mH-dt7"/>
+                        <outlet property="board" destination="ZWq-pe-rfp" id="VCV-G3-UQS"/>
+                        <outlet property="resetButton" destination="QhS-GO-bIE" id="Grx-fi-xA4"/>
+                        <outlet property="scoreLabel" destination="tD1-rD-eHV" id="NdJ-pO-FpJ"/>
+                        <outlet property="titleLabel" destination="yjT-i2-Rsc" id="4Kt-Be-DUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6G-vW-p5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
